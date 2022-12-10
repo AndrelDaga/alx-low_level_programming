@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ *main - Entry point
+ *
+ *Description: 'the program's description'
+ *
+ *Return: Always 0 (Success0
+ */
 
 int main(void)
 {
