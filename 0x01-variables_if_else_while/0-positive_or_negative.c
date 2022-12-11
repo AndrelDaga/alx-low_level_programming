@@ -1,8 +1,17 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
+#include <stdio.h>
 
 /* betty style doc for function main goes there */
+
+/**
+ *main - function
+ *
+ *Description: 'This is a doc for the main function'
+ *
+ *Returns: zero(SUCCESS)
+ */
 
 int main(void)
 {
