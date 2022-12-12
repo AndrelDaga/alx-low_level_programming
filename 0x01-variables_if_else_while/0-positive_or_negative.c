@@ -10,7 +10,7 @@
  *
  *Description: 'This is a doc for the main function'
  *
- *Returns: zero(SUCCESS)
+ *Return: Always 0 (Success)
  */
 
 int main(void)
