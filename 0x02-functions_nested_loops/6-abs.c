@@ -7,7 +7,7 @@
   *Return: positive int value
   */
 
-int _abs(int)
+int _abs(int x)
 {
-	return (abs(int));
+	return (abs(int x));
 }
