@@ -1,15 +1,15 @@
-#include "main.h"
-
 /**
- *main - entry point
- *
- *description: 'compiler starts executing from here'
- *
- *return: always 0 (Success)
- */
+  *print_alphabet - prints the alphabet in lowercase
+  *Return: return void
+  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+
+	for (i = 97; i < 123; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }

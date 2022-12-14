@@ -1,19 +1,3 @@
-#include <stdio.h>
+int _putchar(char c);
 
-/**
- *print_alphabet - prints the alphabet in lower case
- *
- *Return: nothing (void)
- */
-
-void print_alphabet(void)
-{
-	char c;
-
-	for (c = 97; c < 123; c++)
-	{
-		_putchar(c);
-
-	}
-	_putchar('\n');
-}
+void print_alphabet(void);
