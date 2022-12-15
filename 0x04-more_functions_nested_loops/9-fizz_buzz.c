@@ -47,4 +47,5 @@ void fizz_buzz(void)
 			i = i + 1;
 		}
 	}
+	printf("\n");
 }
