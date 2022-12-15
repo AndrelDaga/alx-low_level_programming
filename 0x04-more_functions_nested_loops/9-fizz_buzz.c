@@ -1,6 +1,20 @@
 #include <stdio.h>
 
 /**
+  *main - entry point
+  *Return: always 0
+  */
+
+/*prototype */
+void fizz_buzz(void);
+
+int main(void)
+{
+	fizz_buzz();
+	return (0);
+}
+
+/**
   * fizz_buzz - prints number, fizz, buzz based on some conditions
   *Return: it returns nothing just prints out the specified
   */
