@@ -10,9 +10,9 @@
 
 void rev_string(char *s)
 {
-	int size;
+	int size = strlen(s) + 1;
 
-	char tmp[size];
+	char t[size];
 
 	int i;
 
@@ -20,17 +20,14 @@ void rev_string(char *s)
 
 	int x;
 
-	size = strlen(s) + 1;
-
 	j = 0;
-
 	for (i = size - 2; i >= 0; i--)
 	{
-		tmp[j] = s[i];
+		t[j] = s[i];
 		j++;
 	}
 	for (x = 0; x < size - 1; x++)
 	{
-		s[x] = tmp[x];
+		s[x] = t[x];
 	}
 }
