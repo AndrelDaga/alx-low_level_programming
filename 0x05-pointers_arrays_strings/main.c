@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * reset_to_98 - updates the value pointer parameter points to 98
  * @n: the pointer parameter
