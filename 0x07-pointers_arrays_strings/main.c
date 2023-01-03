@@ -3,6 +3,9 @@
 /**
  * _memset - fills memory with a constant byte.
  *
+ *@s: parameter 1
+ *@b: parameter 2
+ *@n: parameter 3
  *Description: 'Program's description'
  *
  *Return: a pointer
