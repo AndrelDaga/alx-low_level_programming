@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - prints it's own name
- * @argc - stores number of argument
- * @argv - stores pointer to arguments
- * Description: 'Program's description'
- * return: returns zero
+ * main - prints its own name
+ * @argc: stores the number of parameters passed to program
+ * @argv: stores pointers to each argument
+ * Description: 'Progrma's description'
+ * Return: returns nothing
  */
 
 int main(int argc, char *argv[])
