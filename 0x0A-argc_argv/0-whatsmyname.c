@@ -1,6 +1,14 @@
 #include <stdio.h>
 
-int main (int argc, char *argv[])
+/**
+ * main - prints it's own name
+ * @argc - stores number of argument
+ * @argv - stores pointer to arguments
+ * Description: 'Program's description'
+ * return: returns zero
+ */
+
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
