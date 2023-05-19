@@ -10,6 +10,7 @@
 int main(void)
 {
 	int a;
+
 	a = 97;
 	while (a < 123)
 	{
