@@ -14,17 +14,17 @@ int main(void)
 	int b;
 
 	a = 97;
-    b = 65;
+	b = 65;
 	while (a < 123)
 	{
 		putchar(a);
 		a++;
 	}
-    while (b < 91)
-    {
-        putchar(b);
-        b++;
-    }
+	while (b < 91)
+	{
+		putchar(b);
+		b++;
+	}
 	putchar('\n');
 	return (0);
 }
