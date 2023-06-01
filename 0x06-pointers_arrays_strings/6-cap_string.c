@@ -6,7 +6,7 @@
  * @s: the string
  * Return: a pointer
  */
-void *cap_string(char *s)
+char *cap_string(char *s)
 {
 	int i;
 
@@ -17,7 +17,7 @@ void *cap_string(char *s)
 		{
 			s[i + 1] = toupper(s[i + 1]);
 		}
-		if (s[i] == '!' || s[i] == '?' || s[i] == '""')
+		if (s[i] == '!' || s[i] == '?' || s[i] == '"')
 		{
 			s[i + 1] = toupper(s[i + 1]);
 		}
@@ -25,7 +25,7 @@ void *cap_string(char *s)
 		{
 			s[i + 1] = toupper(s[i + 1]);
 		}
-		if (s[i] == '}' || s[i] == '\n', s[i] == '\t')
+		if (s[i] == '}' || s[i] == '\n' || s[i] == '\t')
 		{
 			s[i + 1] = toupper(s[i + 1]);
 		}
