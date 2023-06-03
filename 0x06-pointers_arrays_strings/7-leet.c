@@ -20,7 +20,7 @@ char *leet(char *s)
 		{
 			s[i] = '3';
 		}
-		if (s[i] == '0' || s[i] == 'O')
+		if (s[i] == 'o' || s[i] == 'O')
 		{
 			s[i] = '0';
 		}
