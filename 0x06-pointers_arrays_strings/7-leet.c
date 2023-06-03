@@ -15,24 +15,34 @@ char *leet(char *s)
 		if (s[i] == 'a' || s[i] == 'A')
 		{
 			s[i] = '4';
+			i++;
 		}
-		if (s[i] == 'e' || s[i] == 'E')
+		else if (s[i] == 'e' || s[i] == 'E')
 		{
 			s[i] = '3';
+			i++;
 		}
-		if (s[i] == 'o' || s[i] == 'O')
+		else if (s[i] == 'o' || s[i] == 'O')
 		{
 			s[i] = '0';
+			i++;
 		}
-		if (s[i] == 't' || s[i] == 'T')
+		else if (s[i] == 't' || s[i] == 'T')
 		{
 			s[i] = '7';
+			i++;
 		}
-		if (s[i] == 'l' || s[i] == 'L')
+		else if (s[i] == 'l' || s[i] == 'L')
 		{
 			s[i] = '1';
+			i++;
 		}
-		i++;
+		else
+		{
+			i++;
+			continue;
+		}
+
 	}
 	return (s);
 }
