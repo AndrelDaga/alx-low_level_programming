@@ -14,21 +14,22 @@ char *_strdup(char *str)
 	unsigned int size;
 	char *ptr;
 
-	size = strlen(str);
-	if (size == 0)
-	{
-		return (NULL);
-	}
-	ptr = malloc(sizeof(char) * size);
-	if (ptr == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		strncpy(ptr, str, size);
-		return (ptr);
+		size = strlen(str);
+		ptr = malloc(sizeof(char) * size);
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
+		else
+		{
+			strncpy(ptr, str, size);
+			return (ptr);
+		}
 	}
-
-
 }
