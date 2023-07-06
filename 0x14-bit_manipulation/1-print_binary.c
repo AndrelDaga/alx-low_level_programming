@@ -7,11 +7,10 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int size, mask, l;
+	unsigned long int size, mask;
 	int i;
 
 	size = sizeof(unsigned long int) * 8;
-	l = 0;
 
 	if (n == 0)
 	{
@@ -22,15 +21,11 @@ void print_binary(unsigned long int n)
 		mask = n & (1 << i);
 		if (mask == 0)
 		{
-			if (l)
-			{
-				_putchar('0');
-			}
+			_putchar('0');
 		}
 		else
 		{
 			_putchar('1');
-			l = 1;
 		}
 	}
 	_putchar('\n');
