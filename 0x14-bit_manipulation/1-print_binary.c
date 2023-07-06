@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	unsigned long int size, mask, l;
 	int i;
 
-	size = sizeof(int) * 8;
+	size = sizeof(unsigned long int) * 8;
 	l = 0;
 
 	if (n == 0)
