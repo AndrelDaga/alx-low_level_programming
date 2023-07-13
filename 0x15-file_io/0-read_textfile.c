@@ -22,6 +22,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	array = malloc(sizeof(char) * (letters + 1));
+	if (array == NULL)
+	{
+		return (0);
+	}
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 	{
