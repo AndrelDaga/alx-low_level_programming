@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *array;
 	FILE *ptr;
-	ssize_t num_read;
+	ssize_t num_read, num_write;
 
 	if (filename == NULL)
 	{
@@ -25,15 +25,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 	{
+		fclose(ptr);
 		return (0);
 	}
 	num_read = fread(array, sizeof(char), letters, ptr);
 	if (num_read < 0)
 	{
+		fclose(ptr);
 		return (0);
 	}
 	array[num_read] = '\0';
-	write(1, array, num_read);
+	num_write = write(1, array, num_read);
+	if (num_write < 0)
+	{
+		fclose(ptr);
+		return (0);
+	}
+	free(array);
 	fclose(ptr);
 	return (num_read);
 
