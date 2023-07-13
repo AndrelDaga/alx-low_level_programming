@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *array;
 	FILE *ptr;
-	ssize_t num_read, num_write;
+	ssize_t num_read;
 
 	if (filename == NULL)
 	{
@@ -35,12 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	array[num_read] = '\0';
-	num_write = write(1, array, num_read);
-	if (num_write == -1)
-	{
-		fclose(ptr);
-		return (0);
-	}
+	write(1, array, num_read);
 	fclose(ptr);
 	return (num_read);
 
