@@ -29,13 +29,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ptr = fopen(filename, "r");
 	if (ptr == NULL)
 	{
-		fclose(ptr);
 		return (0);
 	}
 	num_read = fread(array, sizeof(char), letters, ptr);
 	if (num_read < 0)
 	{
-		fclose(ptr);
 		return (0);
 	}
 	array[num_read] = '\0';
