@@ -14,8 +14,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	ssize_t nr;
+	ssize_t lt;
 	int fd;
 
+	lt = letters;
 	if (filename == NULL)
 	{
 		return (0);
@@ -31,14 +33,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	nr = write(1, buf, letters);
+	nr = write(STDOUT_FILENO, buf, letters);
 	if (nr == -1)
 	{
 		free(buf);
 		close(fd);
 		return (0);
 	}
-	if (nr < letters)
+	if (nr < lt)
 	{
 		free(buf);
 		close(fd);
