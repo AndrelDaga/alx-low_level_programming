@@ -42,17 +42,47 @@ int main(int ac, char **av)
 		if (nr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from %s\n", av[1]);
+			if (close(fd_from) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+				return (100);
+			}
+			if (close(fd_to) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+				return (100);
+			}
 			return (98);
 		}
 		nr2 = write(fd_to, buf, nr);
 		if (nr2 == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			if (close(fd_from) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+				return (100);
+			}
+			if (close(fd_to) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+				return (100);
+			}
 			return (99);
 		}
 	} while (nr > 0);
 	nl = '\n';
 	write(fd_to, &nl, 1);
+	if (close(fd_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		return (100);
+	}
+	if (close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+		return (100);
+	}
 	return (0);
 }
 
